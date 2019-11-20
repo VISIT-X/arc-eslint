@@ -14,10 +14,10 @@ npm install arc-eslint eslint
 
 ```json
 {
-	"project_id": "YourProjectName",
-	"load" : [
-		"./node_modules/visit-x/arc-eslint"
-	]
+    "project_id": "YourProjectName",
+    "load" : [
+        "./node_modules/visit-x/arc-eslint"
+    ]
 }
 ```
 
