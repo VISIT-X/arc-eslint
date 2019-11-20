@@ -1,0 +1,15 @@
+{
+	"name": "arc-eslint",
+	"version": "0.0.1",
+	"description": "ESlint for arcanist/phabricator (extension)",
+	"repository": "https://github.com/VISIT-X/arc-eslint",
+	"license": "AGPL-3.0-or-later",
+	"keywords": [
+		"vxpay",
+		"visit-x",
+		"vxpay-js"
+	],
+	"peerDependencies": {
+		"eslint": "^4.19.0"
+	}
+}

@@ -1,0 +1,6 @@
+.DS_Store
+.idea/
+package/
+node_modules/
+
+arc-eslint-*.tgz
