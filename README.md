@@ -16,7 +16,7 @@ npm install arc-eslint eslint
 {
     "project_id": "YourProjectName",
     "load" : [
-        "./node_modules/visit-x/arc-eslint"
+        "./node_modules/arc-eslint"
     ]
 }
 ```
