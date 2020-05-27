@@ -139,4 +139,29 @@ final class ESLintLinter extends ArcanistExternalLinter {
 				return ArcanistLintSeverity::SEVERITY_ERROR;
 		}
 	}
+
+	/**
+	 * @note override to prevent --config option being wrapped in quotes
+	 *
+	 * @param array $paths
+	 *
+	 * @return array
+	 */
+	protected function buildFutures(array $paths) {
+		$executable = $this->getExecutableCommand();
+
+		$bin = csprintf('%C %C', $executable, implode(' ', $this->getCommandFlags()));
+
+		$futures = array();
+		foreach ($paths as $path) {
+			$disk_path = $this->getEngine()->getFilePathOnDisk($path);
+			$path_argument = $this->getPathArgumentForLinterFuture($disk_path);
+			$future = new ExecFuture('%C %C', $bin, $path_argument);
+
+			$future->setCWD($this->getProjectRoot());
+			$futures[$path] = $future;
+		}
+
+		return $futures;
+	}
 }
