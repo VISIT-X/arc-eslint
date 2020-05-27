@@ -35,3 +35,19 @@ npm install arc-eslint eslint
     }
 }
 ```
+
+#### Custom config for arcanist (other then IDE, for instance)
+
+```json
+{
+    "linters": {
+        "js-files": {
+            "type": "eslint",
+            "include": "(^src/app/.*\\.js(x)$)",
+            "exclude": "(^build/.*\\.js$)",
+            "bin": "./node_modules/.bin/eslint",
+            "eslint.config": "./.eslintrc.strict.json"
+        }
+    }
+}
+```
